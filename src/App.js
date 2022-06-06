@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Expenses from "./components/Expenses";
 
@@ -26,7 +25,12 @@ function App() {
     },
   ];
 
-  return <Expenses expenses={expenses} />;
+  return (
+    <div>
+      <h2>Let's get started!</h2>
+      <Expenses expenses={expenses} />
+    </div>
+  );
 }
 
 export default App;
