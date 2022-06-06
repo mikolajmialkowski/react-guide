@@ -10,9 +10,6 @@ function ExpenseIteam(props) {
             </div>
         </div>
     );
-
-
-    
 }
 
 export default ExpenseIteam;
