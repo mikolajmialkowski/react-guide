@@ -1,7 +1,7 @@
 import "./App.css";
 import Expenses from "./components/Expenses/Expenses.js";
 
-function App() {
+const App = () => {
   const expenses = [
     {
       title: "Car Insurance",
