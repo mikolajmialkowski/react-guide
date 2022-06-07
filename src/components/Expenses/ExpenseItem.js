@@ -1,15 +1,14 @@
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card.js";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const ExpenseIteam = (props) => {
+  const [title, setTitle] = useState(props.title);
 
-const [title, setTitle] = useState(props.title);
-
-const clickHandler = () => {
-  setTitle("Updated!")
-};
+  const clickHandler = () => {
+    setTitle(Math.random);
+  };
 
   return (
     <Card className="expense-item">
@@ -21,6 +20,6 @@ const clickHandler = () => {
       <button onClick={clickHandler}>Change Title</button>
     </Card>
   );
-}
+};
 
 export default ExpenseIteam;
