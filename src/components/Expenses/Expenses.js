@@ -9,7 +9,7 @@ const Expenses = (props) => {
 
   const YearPickedHandler = (selectedYear) => {
     setYear((previousState) => {
-      return(selectedYear);
+      return selectedYear;
     });
     console.log(selectedYear);
   };
@@ -17,27 +17,14 @@ const Expenses = (props) => {
   return (
     <div>
       <Card className="expenses">
-      <ExpensesFilter selectedYear={year} onYearPicked={YearPickedHandler} />
-        <ExpenseIteam
-          title={props.expenses[0].title}
-          amount={props.expenses[0].amount}
-          date={props.expenses[0].date}
-        />
-        <ExpenseIteam
-          title={props.expenses[1].title}
-          amount={props.expenses[1].amount}
-          date={props.expenses[1].date}
-        />
-        <ExpenseIteam
-          title={props.expenses[2].title}
-          amount={props.expenses[2].amount}
-          date={props.expenses[2].date}
-        />
-        <ExpenseIteam
-          title={props.expenses[3].title}
-          amount={props.expenses[3].amount}
-          date={props.expenses[3].date}
-        />
+        <ExpensesFilter selectedYear={year} onYearPicked={YearPickedHandler} />
+        {props.expenses.map((expense) => (
+          <ExpenseIteam
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}
+          />
+        ))}
       </Card>
     </div>
   );
