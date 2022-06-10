@@ -20,6 +20,7 @@ const Expenses = (props) => {
         <ExpensesFilter selectedYear={year} onYearPicked={YearPickedHandler} />
         {props.expenses.map((expense) => (
           <ExpenseIteam
+            key={expense.id}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
