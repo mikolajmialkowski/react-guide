@@ -41,7 +41,7 @@ const ExpenseForm = (props) => {
 
   const hideFormHandler = (event) => {
     event.preventDefault(); // prevet default page reload by browser
-    props.onHideForm(false);
+    props.onHideForm();
     clearFormFields();
   };
 
