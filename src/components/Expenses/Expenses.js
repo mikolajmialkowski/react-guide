@@ -11,7 +11,6 @@ const Expenses = (props) => {
     setYear((previousState) => {
       return selectedYear;
     });
-    console.log(selectedYear);
   };
 
   const FilteredYear = () => {
