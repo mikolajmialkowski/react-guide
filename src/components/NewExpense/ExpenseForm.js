@@ -80,12 +80,8 @@ const ExpenseForm = (props) => {
           />
         </div>
       </div>
-
       <div className="new-expense__actions">
-          <button onClick={hideFormHandler} >Canclel</button>
-      </div>
-
-      <div className="new-expense__actions">
+      <button onClick={hideFormHandler} >Canclel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
