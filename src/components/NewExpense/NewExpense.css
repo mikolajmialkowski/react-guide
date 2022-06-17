@@ -14,7 +14,7 @@
     cursor: pointer;
     padding: 1rem 2rem;
     border: 1px solid #ffffff;
-    background-color: #01802d85;
+    background-color: rgba(31,31,31);
     color: white;
     border-radius: 12px;
     margin-right: 1rem;
@@ -22,7 +22,7 @@
   
   .new-expense button:hover,
   .new-expense button:active {
-    background-color: #05801e;
+    background-color: #29cf1496;
     border-color: #0a8836;
   }
   
