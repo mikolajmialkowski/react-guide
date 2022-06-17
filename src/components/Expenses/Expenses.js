@@ -20,22 +20,24 @@ const Expenses = (props) => {
     );
   };
 
+  let expensesContent = <p>No expensed found</p>;
+
+  if (FilteredYear().length > 0) {
+    expensesContent = FilteredYear().map((expense) => (
+      <ExpenseIteam
+        key={expense.id}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
+      />
+    ));
+  }
+
   return (
     <div>
       <Card className="expenses">
         <ExpensesFilter selectedYear={year} onYearPicked={YearPickedHandler} />
-        {FilteredYear().length === 0 ? (
-          <p>No expensed found</p>
-        ) : (
-          FilteredYear().map((expense) => (
-            <ExpenseIteam
-              key={expense.id}
-              title={expense.title}
-              amount={expense.amount}
-              date={expense.date}
-            />
-          ))
-        )}
+        {expensesContent}
       </Card>
     </div>
   );
