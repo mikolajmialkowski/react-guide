@@ -31,7 +31,7 @@ const ExpenseForm = (props) => {
 
     let expenseData = {
       title: userInput.enteredTitle,
-      amount: userInput.enteredAmount,
+      amount: +userInput.enteredAmount,
       date: new Date(userInput.enteredDate),
     };
 
