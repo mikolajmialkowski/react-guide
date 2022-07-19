@@ -63,6 +63,8 @@ const ExpenseChart = (props) => {
       number: 11,
     },
   ];
+ 
+  //sum all expenses for specific month
 
   chartDataPoints.forEach(
     (month) =>
